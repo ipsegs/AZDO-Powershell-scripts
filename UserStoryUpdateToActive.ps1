@@ -36,7 +36,7 @@ foreach ($childTaskRelation in $response.workItemRelations) {
 
         Invoke-RestMethod -Uri $parentWorkItemUrl -Method Patch -ContentType "application/json-patch+json" -Headers $header -Body $updateBody
 
-        Write-Output "Parent User Story with URL $parentUserStoryUrl has been updated to $desired-state."
+        Write-Output "Parent User Story with URL $parentUserStoryUrl has been updated to "$desired-state"."
         Write-Output "Source URL: $sourceUrl"
     }
 }
